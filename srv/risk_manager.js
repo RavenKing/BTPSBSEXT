@@ -40,7 +40,7 @@ module.exports = cds.service.impl(async function() {
         const expandIndex = req.query.SELECT.columns.findIndex(
             ({ expand, ref }) => expand && ref[0] === "bp"
         );
-
+                console.log("test");
         if (expandIndex < 0) return next();
 
         // Remove expand from query
